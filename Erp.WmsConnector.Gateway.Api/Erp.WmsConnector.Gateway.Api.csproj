@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Modules\Chaos\Erp.WmsConnector.Chaos.Api\Erp.WmsConnector.Chaos.Api.csproj" />
+    <ProjectReference Include="..\..\Integrations\Legacy\Erp.WmsConnector.Integrations.Legacy.Api\Erp.WmsConnector.Integrations.Legacy.Api.csproj" />
+    <ProjectReference Include="..\..\Modules\Dictionaries\Erp.WmsConnector.Dictionaries.Api\Erp.WmsConnector.Dictionaries.Api.csproj" />
+    <ProjectReference Include="..\..\Modules\Notifications\Erp.WmsConnector.Notifications.Api\Erp.WmsConnector.Notifications.Api.csproj" />
+    <ProjectReference Include="..\..\Modules\Orders\Erp.WmsConnector.Orders.Api\Erp.WmsConnector.Orders.Api.csproj" />
+    <ProjectReference Include="..\..\Modules\Stocks\Erp.WmsConnector.Stocks.Api\Erp.WmsConnector.Stocks.Api.csproj" />
+    <ProjectReference Include="..\..\Modules\Webhooks\Erp.WmsConnector.Webhooks.Api\Erp.WmsConnector.Webhooks.Api.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Erp.WmsConnector.Integrations.Legacy.IntegrationTests" />
+    <InternalsVisibleTo Include="Erp.WmsConnector.Dictionaries.IntegrationTests" />
+  </ItemGroup>
+
+</Project>
